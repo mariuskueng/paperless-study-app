@@ -50,7 +50,7 @@ public class MultipleChoiceQuestion {
 	}
 	
 	public String provideHint() {
-		return null;
+		return getHint();
 	}
 
 	public Choice getChoice(int selectedChoice) {
