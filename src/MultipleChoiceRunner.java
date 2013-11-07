@@ -10,10 +10,10 @@ import paperless.*;
 public class MultipleChoiceRunner {
 
 	public static void main(String[] args) {
-		runSimpleMultipleChoiceTest();
-		runAnotherTestwithHint();
+//		runSimpleMultipleChoiceTest();
+//		runAnotherTestwithHint();
 //		runAnotherTestandRememberResults();
-//		runAnotherTestandSimulateTimer();
+		runAnotherTestandSimulateTimer();
 	}
 	
 	public static void runSimpleMultipleChoiceTest(){
