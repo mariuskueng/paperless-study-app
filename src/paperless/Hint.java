@@ -4,7 +4,7 @@ public class Hint {
 	private String hintText;
 	
 	public Hint(){
-		
+		this.hintText = "";
 	}
 	
 	public Hint(String text){

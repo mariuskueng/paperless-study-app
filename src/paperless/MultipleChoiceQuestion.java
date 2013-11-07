@@ -22,7 +22,9 @@ public class MultipleChoiceQuestion {
 	}
 
 	public List<Choice> selectChoice(Choice c) {
-		return null;
+		int index = choiceList.indexOf(c);
+		choiceList.get(index).setSelected(true);
+		return choiceList;
 	}
 
 	public List<Choice> getChoices() {
@@ -30,13 +32,38 @@ public class MultipleChoiceQuestion {
 	}
 
 	public void skip() {
-
+		// not sure if question should be filled out as empty or
+		// if the question should return at the end of the test
 	}
 
 	public void isAnswerCorrect() {
-
+		Choice selected = null, correct=null;
+		for (int i = 0; i < this.choiceList.size(); i++) {
+			if(this.choiceList.get(i).getSelected()){
+				selected = this.choiceList.get(i);
+			}
+			if(this.choiceList.get(i).getCorrect()){
+				correct = this.choiceList.get(i);
+			}
+		}
+		if(selected == correct){
+			System.out.println("Answer is correct!");
+			this.correct = true;
+		}
+		else{
+			System.out.println("Answer is false!");
+			this.correct = false;
+		}
 	}
 	
+	public boolean isCorrect() {
+		return correct;
+	}
+
+	public void setCorrect(boolean correct) {
+		this.correct = correct;
+	}
+
 	public void setHint(String hint){
 		this.hint = new Hint(hint);
 	}
